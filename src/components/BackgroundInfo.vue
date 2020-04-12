@@ -18,7 +18,7 @@
     </p>
     <h3 class="subtitle is-3">About us</h3>
     <p class="">
-        Lorem ipsum
+        Lorem ipsum test
     </p>
     </section>
 </template>
