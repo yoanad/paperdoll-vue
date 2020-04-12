@@ -18,10 +18,12 @@ npm run build
 npm run build --report
 
 # deploy
+. deploy.sh
+
 git add .
 git commit -m "deploy"
 git push
-. deploy.sh
+
 # npm run build
 
 # git add .
