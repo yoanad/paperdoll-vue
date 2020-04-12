@@ -1,0 +1,231 @@
+.is-bold {
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+.is-impressive-headline {
+    font-size: 5em;
+    color: #2171b4;
+}
+
+.doll-wrapper {
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.doll {
+    width: 242px;
+    height:824px;
+    max-width: 242px;
+}
+
+.doll-body {
+    position: relative;
+}
+
+.tshirt {
+    width: 202px;
+    max-width: 202px;
+    height: 211px;
+}
+.jeans {
+    width: 168px;
+    max-width: 168px;
+    height: 389px;
+}
+
+.tshirt-option {
+    width: 202px;
+    max-width: 100%;
+    height: auto;
+}
+
+.jeans-option {
+    width: 168px;
+    max-width: 100%;
+    height: auto;
+}
+
+.selected-tshirts img {
+    position: absolute;
+    top: 158px;
+    left: calc(50% - 100px);
+    visibility: hidden;
+
+    &.active {
+        visibility: visible;
+    }
+}
+
+.selected-jeans img {
+    position: absolute;
+    top: 347px;
+    left: calc(50% - 83px);
+    visibility: hidden;
+
+    &.active {
+        visibility: visible;
+    }
+}
+
+.tshirts-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 2;
+    // margin-top: 158px;
+    margin: 10px 30px;
+    // border: 1px solid grey;
+
+    .tshirt-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.jeans-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 30px;
+    // border: 1px solid grey;
+    
+    .jeans-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    img {
+        align-self: flex-start;
+    }
+}
+
+.card {
+    margin-left: 10px;
+
+    &.active {
+        border: 1px solid #3298dc;
+    }
+}
+
+.card-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cost-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+    .container {
+        height: 100%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.cup-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    height: 400px;
+
+    .container {
+        height: 100%;
+        position: relative;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.glass {
+    background: rgba( 255, 255, 255, 0.50);
+    width: 300px;
+    height: 100px;
+    position: relative;
+    border-radius: 100%;
+}
+
+.drop-container {
+    display: flex;
+}
+
+.drop {
+    width: 20px;
+    height: 20px;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    border: 1px solid transparent;
+    transform: rotate(-45deg);
+    margin-top: 10px;
+    background-color: #a4c6fa;
+}
+
+.drop-inactive {
+    width: 20px;
+    height: 20px;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    border: 1px solid #a4c6fa;
+    transform: rotate(-45deg);
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+
+.cup {
+    position: relative;
+    width: 150px;
+    height: 180px;
+    border: 6px solid #acacac;
+    border-top: 2px solid transparent;
+    border-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: url('./wave.png');
+    background-position: 0px 350px;
+    background-repeat: repeat-x;
+    box-shadow: 0 0 0 6px #414141, 0 20px 35px rgba(0,0,0,1);
+  }
+
+  .cup-pour {
+    background-position: 3000px 0px;
+    -webkit-transition: all 2s ease-out;
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+  }
+
+  .cup-drain {
+    background-position: 0px 350px;
+  }
+
+  .cup:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    border: 6px solid #414141;
+    right: -57px;
+    top: 30px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+  }
+
+  section.background {
+      margin: 30px 0;
+  }
