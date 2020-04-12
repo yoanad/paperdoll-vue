@@ -1,3 +1,4 @@
+
 <template>
   <div id="wrap">
     <div id="model" class="flat-select" @change="changeData" ></div>
@@ -25,7 +26,7 @@
 </template>
 
 <script>
-import VueApexCharts from "vue-apexcharts";
+import VueApexCharts from 'vue-apexcharts'
 import colors from "../helpers/colors";
 import arrayData from "../helpers/arrayData";
 
@@ -125,7 +126,7 @@ export default {
       chartOptions: {
         chart: {
           id: "barItem",
-          height: 300,
+          height: 400,
           width: "100%",
           type: "bar",
           events: {
@@ -212,14 +213,16 @@ export default {
         title: {
           text: "Your Clothing choice",
           offsetX: 15,
-          margin: 10,
+          margin: 20,
           style: {
             fontSize: 28
           }
         },
         subtitle: {
-          text: "(Click on bar to see details)",
+          text: "(Click on bar to see water-consuming volume for one item)",
           //margin: 30,
+          align: 'left',
+          floating: true,
           offsetX: 15,
           offsetY: 50,
           style: {
@@ -229,11 +232,20 @@ export default {
         yaxis: {
           labels: {
             show: false
+          },
+          title:{
+            text:'Types of clothes',
+            style: {
+              fontSize: '12px',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              fontWeight: 600,
+              cssClass: 'apexcharts-xaxis-title',
+              }
           }
         },
         xaxis: {
           title: {
-            text: "world average",
+            text: "world average water use in producing one item(lbs)",
             style: {
               fontSize: "14px",
               fontFamily: "Helvetica, Arial, sans-serif",
@@ -241,6 +253,7 @@ export default {
               cssClass: "apexcharts-yaxis-title"
             }
           }
+          
         }
       },
 
@@ -249,6 +262,8 @@ export default {
           data: []
         }
       ],
+
+
       chartOptionsQuarter: {
         chart: {
           id: "barQuarter",
@@ -257,6 +272,7 @@ export default {
           type: "bar",
           stacked: false
         },
+        showAlways: true,
         plotOptions: {
           bar: {
             columnWidth: "80%",
@@ -264,7 +280,9 @@ export default {
           }
         },
         legend: {
-          show: true
+          show: true,
+          margin:10
+          // offsetY: 200
         },
         grid: {
           yaxis: {
@@ -274,17 +292,28 @@ export default {
           },
           xaxis: {
             lines: {
-              show: true
-            }
+              show: true,
+            },
+             title: {
+          text: 'water consuming',
+          style: {
+
+              fontSize: '12px',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              fontWeight: 600,
+              cssClass: 'apexcharts-xaxis-title',
+          },
+      },
+        
           }
         },
         yaxis: {
           labels: {
-            show: false
+            show: true,
           }
         },
         title: {
-          text: "Country by country analysing",
+          text: "Country by country analysing result",
           offsetX: 10,
           style: {
             fontSize: 20

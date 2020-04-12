@@ -21,5 +21,4 @@
         Lorem ipsum
     </p>
     </section>
-</template>
-
+</template>\n
