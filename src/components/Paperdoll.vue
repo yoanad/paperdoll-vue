@@ -2,7 +2,7 @@
     <div>
         <section class="section">
             <div class="container">
-              <h1 class="title">Choose your outfit and calculate your water footprint.</h1>
+              <h1 class="title">Test.Choose your outfit and calculate your water footprint.</h1>
             </div>
           </section>
           <section class="section doll-wrapper">

@@ -18,13 +18,17 @@ npm run build
 npm run build --report
 
 # deploy
-npm run build
-
 git add .
 git commit -m "deploy"
 git push
+. deploy.sh
+# npm run build
 
-git push -f git@github.com:yoanad/paperdoll-vue.git master:gh-pages
+# git add .
+# git commit -m "deploy"
+# git push
+
+# git push -f git@github.com:yoanad/paperdoll-vue.git master:gh-pages
 
 ```
 
