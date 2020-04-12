@@ -2,7 +2,7 @@
     <div>
         <section class="section">
             <div class="container">
-              <h1 class="title">Test.Choose your outfit and calculate your water footprint.</h1>
+              <h1 class="title">Choose your outfit and calculate your water footprint.</h1>
             </div>
           </section>
           <section class="section doll-wrapper">
@@ -124,6 +124,10 @@
               <h3 id="days" class="subtitle is-impressive-headline">
                 0 days
               </h3>
+              <p class="title">or</p>
+              <h3 id="years" class="subtitle is-impressive-headline">
+                0 years
+              </h3>
               <div class="cup">
               </div>
             </div>
@@ -141,15 +145,8 @@
 </template>
 
 <script>
-// import 'normalize.css/normalize.css';
-// import './styles/index.scss';
-
-// import dollImgSrc from '../assets/images/doll.png';
-// import shirtImgSrc from '../assets/images/tshirt-generic.png';
-// import jeansImgSrc from '../assets/images/jeans-generic.png';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // document.querySelector('.doll').src = dollImgSrc;
 
   const selectedTshirts = document.querySelector('.selected-tshirts')
   const selectedJeans = document.querySelector('.selected-jeans')
@@ -167,8 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#total-cost').textContent = `${totalCost} litres`
     document.querySelector('#total-cost').dataset.val = totalCost
 
-    const drinkingCost = drinkingWaterDays(totalCost)
-    document.querySelector('#days').textContent = `${drinkingCost} days`
+    const drinkingCostDays = drinkingWaterDays(totalCost)
+    document.querySelector('#days').textContent = `${drinkingCostDays} days`
+
+    const drinkingCostYears = drinkingWaterYears(totalCost)
+    document.querySelector('#years').textContent = `${drinkingCostYears} years`
 
     pourWater()
   }
@@ -216,6 +216,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return parseFloat(litres / 1.2).toFixed(2)
   }
 
+  const drinkingWaterYears = (litres) => {
+    const daysVal = parseFloat((litres / 1.2));
+    return (daysVal / 365).toFixed(2)
+  }
+
   document.querySelectorAll('.tshirt-card').forEach((el) => {
     el.addEventListener('click', selectTshirt)
   })
@@ -223,18 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.jeans-card').forEach((el) => {
     el.addEventListener('click', selectJeans)
   })
-
-  // Tmp setting of images
-  // const tshirts = document.querySelectorAll('.tshirt')
-  // const jeans = document.querySelectorAll('.jeans')
-
-  // tshirts.forEach((el) => {
-  //   el.src = shirtImgSrc
-  // })
-
-  // jeans.forEach((el) => {
-  //   el.src = jeansImgSrc
-  // })
 })
 
 export default {
