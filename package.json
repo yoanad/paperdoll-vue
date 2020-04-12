@@ -4,6 +4,7 @@
   "description": "A Vue.js project",
   "author": "yoanad <yoana.dimova@gmail.com>",
   "private": true,
+  "homepage": "git@github.com:yoanad/paperdoll-vue.git",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
