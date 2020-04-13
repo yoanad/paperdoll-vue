@@ -7,7 +7,7 @@
     <div id="barItem" >
       <apexchart
         type="bar"
-        width="600"
+        width="630"
         height="520"
         ref="chart"
         :options="chartOptions"
@@ -18,7 +18,7 @@
     <div id="chart-quarter">
       <apexchart
         type="bar"
-        width="600"
+        width="630"
         height="520"
         ref="chartQuarter"
         :options="chartOptionsQuarter"
@@ -280,7 +280,7 @@ export default {
         showAlways: false,
         plotOptions: {
           bar: {
-            columnWidth: "80%",
+            columnWidth: "90%",
             horizontal: false
           }
         },
