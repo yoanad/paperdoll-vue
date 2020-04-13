@@ -7,7 +7,7 @@
     <div id="barItem" >
       <apexchart
         type="bar"
-        width="630"
+        width="680"
         height="520"
         ref="chart"
         :options="chartOptions"
@@ -18,7 +18,7 @@
     <div id="chart-quarter">
       <apexchart
         type="bar"
-        width="630"
+        width="680"
         height="520"
         ref="chartQuarter"
         :options="chartOptionsQuarter"
@@ -415,6 +415,6 @@ export default {
     .arrow{
     width: 3%;
     height: 3%;
-    margin: 5em;
+    margin: 4em;
 }
 </style>
