@@ -219,7 +219,7 @@ export default {
           }
         },
         subtitle: {
-          text: "(Click on bar to see water-consuming volume for one item)",
+          text: "(Click on bar to see water-consuming volume for clothes)",
           //margin: 30,
           align: 'left',
           floating: true,
@@ -272,7 +272,7 @@ export default {
           type: "bar",
           stacked: false
         },
-        showAlways: true,
+        showAlways: false,
         plotOptions: {
           bar: {
             columnWidth: "80%",
@@ -289,28 +289,35 @@ export default {
             lines: {
               show: false
             }
-          },
+          }},
           xaxis: {
             lines: {
               show: true,
             },
              title: {
-          text: 'water consuming',
-          style: {
+                text: 'country',
+              style: {
+              fontSize: '12px',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              fontWeight: 600,
+              cssClass: 'apexcharts-xaxis-title',
+          }
+      },
+          },
+        yaxis: {
+          labels: {
+            show: true,
+          },
+          title:{
+            text:'volume of water consumed(lbs)',
+            style: {
 
               fontSize: '12px',
               fontFamily: 'Helvetica, Arial, sans-serif',
               fontWeight: 600,
               cssClass: 'apexcharts-xaxis-title',
           },
-      },
-        
-          }
-        },
-        yaxis: {
-          labels: {
-            show: true,
-          }
+          },
         },
         title: {
           text: "Country by country analysing result",
