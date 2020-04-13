@@ -3,35 +3,35 @@
   <div id="wrap">
     <div id="title">Water consuming of clothes in countries</div>
     <div id="chart-container">
-    <div id="model" class="flat-select" @change="changeData" ></div>
-    <div id="barItem" >
-      <apexchart
-        type="bar"
-        width="540"
-        height="520"
-        ref="chart"
-        :options="chartOptions"
-        :series="series"
-      ></apexchart>
-    </div>
-    <img src="../assets/arrow.png" class="arrow">
-    <div id="chart-quarter">
-      <apexchart
-        type="bar"
-        width="540"
-        height="520"
-        ref="chartQuarter"
-        :options="chartOptionsQuarter"
-        :series="seriesQuarter"
-      ></apexchart>
-    </div>
+      <div id="model" class="flat-select" @change="changeData"></div>
+      <div id="barItem">
+        <apexchart
+          type="bar"
+          width="540"
+          height="520"
+          ref="chart"
+          :options="chartOptions"
+          :series="series"
+        ></apexchart>
+      </div>
+      <img src="../assets/arrow.png" class="arrow" />
+      <div id="chart-quarter">
+        <apexchart
+          type="bar"
+          width="540"
+          height="520"
+          ref="chartQuarter"
+          :options="chartOptionsQuarter"
+          :series="seriesQuarter"
+        ></apexchart>
+      </div>
     </div>
     <div id="tips">**Data source: Water Footprint of Cotton Consumption</div>
   </div>
 </template>
 
 <script>
-import VueApexCharts from 'vue-apexcharts'
+import VueApexCharts from "vue-apexcharts";
 import colors from "../helpers/colors";
 import arrayData from "../helpers/arrayData";
 
@@ -136,7 +136,6 @@ export default {
           type: "bar",
           events: {
             dataPointSelection: function(e, chart, opts) {
-
               var quarterChartEl = document.querySelector("#chart-quarter");
               var yearChartEl = document.querySelector("#chart-year");
 
@@ -144,7 +143,8 @@ export default {
                 if (quarterChartEl.classList.contains("active")) {
                   updateQuarterChart(chart, "barQuarter");
                 } else {
-                  yearChartEl && yearChartEl.classList.add("chart-quarter-activated");
+                  yearChartEl &&
+                    yearChartEl.classList.add("chart-quarter-activated");
                   quarterChartEl && quarterChartEl.classList.add("active");
                   updateQuarterChart(chart, "barQuarter");
                 }
@@ -159,7 +159,25 @@ export default {
             },
             updated: function(chart) {
               updateQuarterChart(chart, "barQuarter");
-            }
+            },
+            responsive: [
+              {
+                breakpoint: 1000,
+                options: {
+                  plotOptions: {
+                    bar: {
+                      distributed: true,
+                      horizontal: true
+                    },
+                    chartOptionsQuarter:{
+                      bar:{
+                        horizontal:false
+                      }
+                    }
+                  },
+                }
+              }
+            ]
           }
         },
         plotOptions: {
@@ -214,9 +232,9 @@ export default {
               }
             }
           },
-          style:{
-            fontSize: '12px',
-          },
+          style: {
+            fontSize: "12px"
+          }
         },
         title: {
           text: "Your Clothing choice",
@@ -229,7 +247,7 @@ export default {
         subtitle: {
           text: "(Click on bar to see water-consuming volume for clothes)",
           //margin: 30,
-          align: 'left',
+          align: "left",
           floating: true,
           offsetX: 15,
           offsetY: 50,
@@ -241,14 +259,14 @@ export default {
           labels: {
             show: false
           },
-          title:{
-            text:'Types of clothes',
+          title: {
+            text: "Types of clothes",
             style: {
-              fontSize: '12px',
-              fontFamily: 'Helvetica, Arial, sans-serif',
+              fontSize: "12px",
+              fontFamily: "Helvetica, Arial, sans-serif",
               fontWeight: 600,
-              cssClass: 'apexcharts-xaxis-title',
-              }
+              cssClass: "apexcharts-xaxis-title"
+            }
           }
         },
         xaxis: {
@@ -261,7 +279,6 @@ export default {
               cssClass: "apexcharts-yaxis-title"
             }
           }
-          
         }
       },
 
@@ -270,8 +287,6 @@ export default {
           data: []
         }
       ],
-
-
       chartOptionsQuarter: {
         chart: {
           id: "barQuarter",
@@ -289,13 +304,13 @@ export default {
         },
         legend: {
           show: true,
-          margin:10
+          margin: 10
           // offsetY: 200
         },
 
-        dataLabels:{
-          style:{
-            fontSize:'10px'
+        dataLabels: {
+          style: {
+            fontSize: "10px"
           }
         },
         grid: {
@@ -303,38 +318,39 @@ export default {
             lines: {
               show: false
             }
-          }},
-          xaxis: {
-            lines: {
-              show: true,
-            },
-             title: {
-                text: 'country',
-              style: {
-              fontSize: '12px',
-              fontFamily: 'Helvetica, Arial, sans-serif',
-              fontWeight: 600,
-              cssClass: 'apexcharts-xaxis-title',
           }
-      },
+        },
+        xaxis: {
+          lines: {
+            show: true
           },
+          title: {
+            text: "country",
+            style: {
+              fontSize: "12px",
+              fontFamily: "Helvetica, Arial, sans-serif",
+              fontWeight: 600,
+              cssClass: "apexcharts-xaxis-title"
+            }
+          }
+        },
         yaxis: {
           labels: {
-            show: true,
+            show: true
           },
-          title:{
-            text:'volume of water consumed(lbs)',
+          title: {
+            text: "volume of water consumed(lbs)",
             style: {
-
-              fontSize: '12px',
-              fontFamily: 'Helvetica, Arial, sans-serif',
+              fontSize: "12px",
+              fontFamily: "Helvetica, Arial, sans-serif",
               fontWeight: 600,
-              cssClass: 'apexcharts-xaxis-title',
-          },
-          },
+              cssClass: "apexcharts-xaxis-title"
+            }
+          }
         },
         title: {
-          text: "Country by country comparison of water consumption for one product",
+          text:
+            "Country by country comparison of water consumption for one product",
           offsetX: 10,
           style: {
             fontSize: 16
@@ -352,7 +368,7 @@ export default {
                 return opts.w.globals.labels[opts.dataPointIndex];
               }
             }
-          },
+          }
         }
       },
 
@@ -371,59 +387,59 @@ export default {
 </script>
 
 <style scoped>
-    body {
-      background: #fff;
-    }
+body {
+  background: #fff;
+}
 
-    #title{
-      text-align: center;
-      font-size: 3em;
-      margin-bottom: 50px;
-      font-Family: 'Helvetica, Arial, sans-serif'
-    }
-    
-    #wrap {
-      margin: 45px auto;
-      /* display: flex; */
-      max-width: 800px;
-    }
+#title {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 50px;
+  font-family: "Helvetica, Arial, sans-serif";
+}
 
-    #chart-container{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .chart-box {
-      padding-left: 0;
-    }
+#wrap {
+  margin: 45px auto;
+  /* display: flex; */
+  max-width: 800px;
+}
 
-    select#model {
-      display: none;
-      position: relative;
-      top: -40px;
-      left: 0;
-      z-index: 2;
-      cursor: pointer;
-      transform: scale(0.8);
-    }
+#chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .barItem {
-      /* float: left; */
-      position: relative;
-      transition: 1s ease transform;
-      z-index: 3;
-    }
-    .chart-quarter{
-      /* float: left; */
-      position: relative;
-      z-index: -2;
-      transition: 1s ease transform;
-    }
+.chart-box {
+  padding-left: 0;
+}
 
-    .arrow{
-    width: 3%;
-    height: 3%;
-    margin: 2.5em;
+select#model {
+  display: none;
+  position: relative;
+  top: -40px;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  transform: scale(0.8);
+}
+
+.barItem {
+  /* float: left; */
+  position: relative;
+  transition: 1s ease transform;
+  z-index: 3;
+}
+.chart-quarter {
+  /* float: left; */
+  position: relative;
+  z-index: -2;
+  transition: 1s ease transform;
+}
+
+.arrow {
+  width: 3%;
+  height: 3%;
+  margin: 2.5em;
 }
 </style>
