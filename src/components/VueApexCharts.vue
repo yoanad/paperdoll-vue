@@ -1,7 +1,13 @@
 
 <template>
-  <div id="wrap">
-    <div id="title">Water consuming of clothes in countries</div>
+  <div class="part-2-section container" id="wrap">
+    <div class="container">
+    <h1 class="title">What, really? Where does this data come from? Explain!</h1>
+    <p class="p-chart-explanation">Efficiency of water usage for cotton production is varies greatly in different countries.
+      We chose to compare the top 4 of seed cotton producing countries in how much a t-shirt and jeans would "cost" in litres, if the cotton was produced in this country.</p>
+    </div>
+    
+    <h4 id="title" class="title is-4">Water consumption for producing different types of clothing</h4>
     <div id="chart-container">
       <div id="model" class="flat-select" @change="changeData"></div>
       <div id="barItem">
@@ -26,7 +32,7 @@
         ></apexchart>
       </div>
     </div>
-    <div id="tips">**Data source: Water Footprint of Cotton Consumption</div>
+    <div id="tips">*** Data source: (Chapagain et al., 2006) </div>
   </div>
 </template>
 
@@ -239,9 +245,10 @@ export default {
         title: {
           text: "Your Clothing choice",
           offsetX: 15,
+          offsetY: 15, 
           margin: 20,
           style: {
-            fontSize: 28
+            fontSize: '1.1em'
           }
         },
         subtitle: {
@@ -252,7 +259,7 @@ export default {
           offsetX: 15,
           offsetY: 50,
           style: {
-            fontSize: 18
+            fontSize: '1em'
           }
         },
         yaxis: {
@@ -350,10 +357,12 @@ export default {
         },
         title: {
           text:
-            "Country by country comparison of water consumption for one product",
+            "Country by country comparison of water consumption",
           offsetX: 10,
+          offsetY: 15,
+          margin: 20,
           style: {
-            fontSize: 16
+            fontSize: '1.1em'
           }
         },
         tooltip: {
@@ -392,16 +401,31 @@ body {
 }
 
 #title {
-  text-align: center;
-  font-size: 3em;
+  /* text-align: center;
+  font-size: 3em; */
   margin-bottom: 50px;
-  font-family: "Helvetica, Arial, sans-serif";
+  /* font-family: "Helvetica, Arial, sans-serif"; */
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+
+.p-chart-explanation {
+  margin-bottom: 50px;
 }
 
 #wrap {
   margin: 45px auto;
   /* display: flex; */
-  max-width: 800px;
+  /* max-width: 800px; */
 }
 
 #chart-container {

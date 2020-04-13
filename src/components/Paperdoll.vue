@@ -1,8 +1,14 @@
 <template>
     <div>
-        <section class="section">
+        <section class="section part-1-section">
             <div class="container">
               <h1 class="title">Choose your outfit and calculate your water footprint.</h1>
+              <p>Fast-fashion production requires <b> a huge amount of cotton and therefore water</b>,
+              therefore the choice you make about buying an outfit has a <b>direct influence on the world</b>.
+              </p>
+              <p>
+                Try our tool and see how much your outfit will cost in water!
+              </p>
             </div>
           </section>
           <section class="section doll-wrapper">
@@ -131,15 +137,6 @@
               <div class="cup">
               </div>
             </div>
-          </section>
-          <section>
-            <p>* Assuming t-shirt cost 0.00025t cotton and jeans cost 0.00075t cotton. Source:
-              <a href="https://ccgga.org/cotton-information/much-cotton-take/"> California Cotton Ginners & Growers Association</a>
-            </p>
-            <p>** Assuming 1.2 litres per day, as recommended by the NHS.
-              Source:
-              <a href="hhttps://www.nhs.uk/news/food-and-diet/six-to-eight-glasses-of-water-still-best/"> NHS website</a>
-            </p>
           </section>
           </div>
 </template>
