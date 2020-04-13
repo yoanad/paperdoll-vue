@@ -7,7 +7,7 @@
     <div id="barItem" >
       <apexchart
         type="bar"
-        width="680"
+        width="540"
         height="520"
         ref="chart"
         :options="chartOptions"
@@ -18,7 +18,7 @@
     <div id="chart-quarter">
       <apexchart
         type="bar"
-        width="680"
+        width="540"
         height="520"
         ref="chartQuarter"
         :options="chartOptionsQuarter"
@@ -132,7 +132,7 @@ export default {
         chart: {
           id: "barItem",
           height: 400,
-          width: "100%",
+          width: "80%",
           type: "bar",
           events: {
             dataPointSelection: function(e, chart, opts) {
@@ -213,7 +213,10 @@ export default {
                 return opts.w.globals.labels[opts.dataPointIndex];
               }
             }
-          }
+          },
+          style:{
+            fontSize: '12px',
+          },
         },
         title: {
           text: "Your Clothing choice",
@@ -280,7 +283,7 @@ export default {
         showAlways: false,
         plotOptions: {
           bar: {
-            columnWidth: "90%",
+            columnWidth: "92%",
             horizontal: false
           }
         },
@@ -288,6 +291,12 @@ export default {
           show: true,
           margin:10
           // offsetY: 200
+        },
+
+        dataLabels:{
+          style:{
+            fontSize:'10px'
+          }
         },
         grid: {
           yaxis: {
@@ -343,7 +352,7 @@ export default {
                 return opts.w.globals.labels[opts.dataPointIndex];
               }
             }
-          }
+          },
         }
       },
 
@@ -376,7 +385,7 @@ export default {
     #wrap {
       margin: 45px auto;
       /* display: flex; */
-      max-width: 1500px;
+      max-width: 800px;
     }
 
     #chart-container{
@@ -415,6 +424,6 @@ export default {
     .arrow{
     width: 3%;
     height: 3%;
-    margin: 4em;
+    margin: 2.5em;
 }
 </style>
