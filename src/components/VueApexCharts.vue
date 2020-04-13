@@ -325,10 +325,10 @@ export default {
           },
         },
         title: {
-          text: "Country-by-country analysing result",
+          text: "Country by country comparison of water consumption for one product",
           offsetX: 10,
           style: {
-            fontSize: 26
+            fontSize: 16
           }
         },
         tooltip: {
