@@ -3,7 +3,7 @@
   <div class="part-2-section container" id="wrap">
     <div class="container">
     <h1 class="title">What, really? Where does this data come from? Explain!</h1>
-    <p class="p-chart-explanation">Efficiency of water usage for cotton production is varies greatly in different countries.
+    <p class="p-chart-explanation">Efficiency of water usage for cotton production varies greatly in different countries.
       We chose to compare the top 4 of seed cotton producing countries in how much a t-shirt and jeans would "cost" in litres, if the cotton was produced in this country.</p>
     </div>
     

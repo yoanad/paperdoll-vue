@@ -1,14 +1,12 @@
 <template>
     <nav class="navbar is-fixed-top">
-        <div>
-        <div class="navbar-middle">
+    <div class="navbar-middle">
         <a id="outfit-link" class="navbar-item">
             1. The Outfit
         </a>
         <a id="data-link" class="navbar-item">
             2. The Background Data
         </a>
-        </div>
     </div>
     </nav>
 </template>
@@ -21,18 +19,24 @@
         display: flex;
         text-align: center;
     }
-    /* ul {
-        position: fixed;
-        background-color: grey;
-        top: 0;
-        width: 100%;
-        left: 0;
-        z-index: 9999;
+
+    .navbar-middle {
         display: flex;
-        min-height: 60px;
         justify-content: center;
         align-items: center;
-    } */
+        padding: 5px;
+        text-align: center;
+        flex-direction: row;
+    }
+
+    .is-active {
+        border-bottom-color: #3273dc;
+        color: #3273dc;
+        border-bottom-width: 2px;
+        /* margin-bottom: -2px; */
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    }
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -46,12 +50,22 @@
             outfitSection.scrollIntoView({ 
             behavior: 'smooth' 
             });
+
+            if (dataLink.classList.contains('is-active')) {
+                 dataLink.classList.remove('is-active');
+            }
+            outfitLink.classList.add('is-active');
         });
 
         dataLink.addEventListener('click', () => {
             dataSection.scrollIntoView({ 
             behavior: 'smooth' 
             });
+
+            if (outfitLink.classList.contains('is-active')) {
+                 outfitLink.classList.remove('is-active');
+            }
+            dataLink.classList.add('is-active');
         });
 
     })
