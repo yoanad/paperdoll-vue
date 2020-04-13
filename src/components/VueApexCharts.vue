@@ -1,27 +1,32 @@
 
 <template>
   <div id="wrap">
+    <div id="title">Water consuming of clothes in countries</div>
+    <div id="chart-container">
     <div id="model" class="flat-select" @change="changeData" ></div>
     <div id="barItem" >
       <apexchart
         type="bar"
-        width="500"
-        height="420"
+        width="600"
+        height="520"
         ref="chart"
         :options="chartOptions"
         :series="series"
       ></apexchart>
     </div>
+    <img src="../assets/arrow.png" class="arrow">
     <div id="chart-quarter">
       <apexchart
         type="bar"
-        width="500"
-        height="420"
+        width="600"
+        height="520"
         ref="chartQuarter"
         :options="chartOptionsQuarter"
         :series="seriesQuarter"
       ></apexchart>
     </div>
+    </div>
+    <div id="tips">**Data source: Water Footprint of Cotton Consumption</div>
   </div>
 </template>
 
@@ -320,10 +325,10 @@ export default {
           },
         },
         title: {
-          text: "Country by country analysing result",
+          text: "Country-by-country analysing result",
           offsetX: 10,
           style: {
-            fontSize: 20
+            fontSize: 26
           }
         },
         tooltip: {
@@ -360,11 +365,24 @@ export default {
     body {
       background: #fff;
     }
+
+    #title{
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 50px;
+      font-Family: 'Helvetica, Arial, sans-serif'
+    }
     
     #wrap {
       margin: 45px auto;
-      max-width: 800px;
-      position: relative;
+      /* display: flex; */
+      max-width: 1500px;
+    }
+
+    #chart-container{
+      display:flex;
+      justify-content: center;
+      align-items: center;
     }
     
     .chart-box {
@@ -373,11 +391,30 @@ export default {
 
     select#model {
       display: none;
-      position: absolute;
+      position: relative;
       top: -40px;
       left: 0;
       z-index: 2;
       cursor: pointer;
       transform: scale(0.8);
     }
+
+    .barItem {
+      /* float: left; */
+      position: relative;
+      transition: 1s ease transform;
+      z-index: 3;
+    }
+    .chart-quarter{
+      /* float: left; */
+      position: relative;
+      z-index: -2;
+      transition: 1s ease transform;
+    }
+
+    .arrow{
+    width: 3%;
+    height: 3%;
+    margin: 5em;
+}
 </style>
