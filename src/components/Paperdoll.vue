@@ -32,7 +32,7 @@
                     <div data-id="0" class="card tshirt-card">
                       <div class="card-content">
                         <img src="../assets/tshirt-generic.png" class="tshirt tshirt-option"/>
-                        <p><span class=" is-6">Source: </span><span class=" is-6 is-bold">India</span></p>
+                        <p><span class=" is-6">Source: </span><span class="p-country is-6 is-bold">India</span></p>
                         <p class="is-6">Water usage:</p>
                         <div class="drop-container">
                           <span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span>
@@ -43,7 +43,7 @@
                     <div data-id="1" class="card tshirt-card">
                       <div class="card-content">
                         <img src="../assets/tshirt-generic.png" class="tshirt tshirt-option"/>
-                        <p><span class=" is-6">Source: </span><span class=" is-6 is-bold">Pakistan</span></p>
+                        <p><span class=" is-6">Source: </span><span class="p-country is-6 is-bold">Pakistan</span></p>
                         <p class="is-6">Water usage:</p>
                         <div class="drop-container">
                           <span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop-inactive"></span>
@@ -53,7 +53,7 @@
                     <div data-id="2" class="card tshirt-card">
                       <div class="card-content">
                         <img src="../assets/tshirt-generic.png" class="tshirt tshirt-option"/>
-                        <p><span class=" is-6">Source: </span><span class=" is-6 is-bold">China</span></p>
+                        <p><span class=" is-6">Source: </span><span class="p-country is-6 is-bold">China</span></p>
                         <p class="is-6">Water usage:</p>
                         <div class="drop-container">
                           <span class="drop"></span><span class="drop-inactive"></span><span class="drop-inactive"></span><span class="drop-inactive"></span>
@@ -63,7 +63,7 @@
                     <div data-id="3" class="card tshirt-card">
                       <div class="card-content">
                         <img src="../assets/tshirt-generic.png" data-id="3" class="tshirt tshirt-option"/>
-                        <p><span class=" is-6">Source: </span><span class=" is-6 is-bold">USA</span></p>
+                        <p><span class=" is-6">Source: </span><span class="p-country is-6 is-bold">USA</span></p>
                         <p class="is-6">Water usage:</p>
                         <div class="drop-container">
                           <span class="drop"></span><span class="drop"></span><span class="drop-inactive"></span><span class="drop-inactive"></span>
@@ -76,7 +76,7 @@
                   <div data-id="0" class="card jeans-card">
                     <div class="card-content">
                       <img src="../assets/jeans-generic.png" class="jeans jeans-option"/>
-                      <p><span class=" is-6">Source: </span><span class=" is-6 is-bold">India</span></p>
+                      <p><span class=" is-6">Source: </span><span class="p-country is-6 is-bold">India</span></p>
                       <p class="is-6">Water usage:</p>
                       <div class="drop-container">
                         <span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop"></span>
@@ -86,7 +86,7 @@
                   <div data-id="1" class="card jeans-card">
                     <div class="card-content">
                       <img src="../assets/jeans-generic.png" class="jeans jeans-option"/>
-                      <p><span class=" is-6">Source: </span><span class=" is-6 is-bold">Pakistan</span></p>
+                      <p><span class=" is-6">Source: </span><span class="p-country is-6 is-bold">Pakistan</span></p>
                       <p class="is-6">Water usage:</p>
                       <div class="drop-container">
                         <span class="drop"></span><span class="drop"></span><span class="drop"></span><span class="drop-inactive"></span>
@@ -96,7 +96,7 @@
                   <div data-id="2" class="card jeans-card">
                     <div class="card-content">
                       <img src="../assets/jeans-generic.png" class="jeans jeans-option"/>
-                      <p><span class=" is-6">Source: </span><span class=" is-6 is-bold">China</span></p>
+                      <p><span class=" is-6">Source: </span><span class="p-country is-6 is-bold">China</span></p>
                       <p class="is-6">Water usage:</p>
                       <div class="drop-container">
                         <span class="drop"></span><span class="drop-inactive"></span><span class="drop-inactive"></span><span class="drop-inactive"></span>
@@ -106,7 +106,7 @@
                   <div data-id="3" class="card jeans-card">
                     <div class="card-content">
                       <img src="../assets/jeans-generic.png" class="jeans jeans-option"/>
-                      <p><span class=" is-6">Source: </span><span class=" is-6 is-bold">USA</span></p>
+                      <p><span class=" is-6">Source: </span><span class="p-country is-6 is-bold">USA</span></p>
                       <p class="is-6">Water usage:</p>
                       <div class="drop-container">
                         <span class="drop"></span><span class="drop"></span><span class="drop-inactive"></span><span class="drop-inactive"></span>

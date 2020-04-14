@@ -6,6 +6,21 @@ p {
     margin-bottom: 8px;
 }
 
+// .p-india {
+//     text-shadow: 1px 1px 0 #efcf8e, 2px 2px 0 #efcf8e;
+// }
+
+// .p-china {
+//     text-shadow: 1px 1px 0 #a4c6fa, 2px 2px 0 #a4c6fa;
+// }
+// .p-pakistan {
+//     text-shadow: 1px 1px 0 #eba4fa, 2px 2px 0 #eba4fa;
+// }
+.p-country {
+    text-shadow: 1px 1px 0 #a4c6fa, 2px 2px 0 #a4c6fa;
+}
+// eba4fa
+// aefaa4
 .is-impressive-headline {
     font-size: 5em;
     color: #2171b4;
@@ -30,33 +45,26 @@ p {
 }
 
 .tshirt {
-    // width: 70px;
     width: 103px;
-    // max-width: 202px;
     height: auto;
 }
 .jeans {
     width: 87px;
-    // max-width: 168px;
     height: auto;
 }
 
 .tshirt-option {
     width: 70px;
-    // max-width: 202px;
     height: auto;
 }
 
 .jeans-option {
     width: 70px;
-    // max-width: 100%;
     height: auto;
 }
 
 .selected-tshirts img {
     position: absolute;
-    // top: 158px;
-    // left: calc(50% - 100px);
     top: 75px;
     left: calc(50% - 51px);
     visibility: hidden;
@@ -82,9 +90,7 @@ p {
     flex-direction: row;
     justify-content: center;
     z-index: 2;
-    // margin-top: 158px;
     margin: 10px 30px;
-    // border: 1px solid grey;
 
     .tshirt-card {
         display: flex;
@@ -99,7 +105,6 @@ p {
     flex-direction: row;
     justify-content: space-around;
     margin: 10px 30px;
-    // border: 1px solid grey;
     
     .jeans-card {
         display: flex;
@@ -147,7 +152,6 @@ p {
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 80px;
-    // height: 400px;
 
     .container {
         height: 100%;

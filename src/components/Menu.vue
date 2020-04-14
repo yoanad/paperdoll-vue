@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar is-fixed-top">
     <div class="navbar-middle">
-        <a id="outfit-link" class="navbar-item">
+        <a id="outfit-link" class="navbar-item is-active">
             1. The Outfit
         </a>
         <a id="data-link" class="navbar-item">
